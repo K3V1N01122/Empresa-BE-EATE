@@ -28,7 +28,7 @@
             text-align: center;
             padding: 50px 20px;
         }
-        .payment-form {
+        .paid-form {
             width: 80%;
             max-width: 600px;
             margin: 0 auto;
@@ -37,15 +37,15 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
-        .payment-form h2 {
+        .paid-form h2 {
             color: #c80000;
         }
-        .payment-form label {
+        .form-label {
             display: block;
             margin: 15px 0 5px;
             color: #333;
         }
-        .payment-form input, .payment-form select {
+        .form-input, .form-select {
             width: 100%;
             padding: 8px;
             margin-top: 5px;
@@ -81,50 +81,44 @@
             <a href="index.html">Volver a la Página Principal</a>
         </nav>
     </header>
-
     <section>
-        <div class="payment-form">
+        <div class="paid-form">
             <h2>Detalles de Pago</h2>
-            <form id="paymentForm">
-                <label for="cardNumber">Número de Tarjeta:</label>
+            <form id="paidForm">
+                <label for="cardNumber" class="form-label">Número de Tarjeta:</label>
                 <input type="text" id="cardNumber" name="cardNumber" required>
-                
-                <label for="cardHolder">Nombre en la Tarjeta:</label>
+                <label for="cardHolder" class="form-label">Nombre en la Tarjeta:</label>
                 <input type="text" id="cardHolder" name="cardHolder" required>
-
-                <label for="expiryDate">Fecha de Expiración:</label>
+                <label for="expiryDate" class="form-label">Fecha de Vencimiento:</label>
                 <input type="month" id="expiryDate" name="expiryDate" required>
-
-                <label for="cvv">CVV:</label>
+                <label for="cvv" class="form-label">CVV:</label>
                 <input type="text" id="cvv" name="cvv" required>
-
                 <button type="button" class="button" onclick="processPayment()">Procesar Pago</button>
             </form>
             <div id="loading">Cargando...</div>
             <div id="message"></div>
         </div>
     </section>
-
     <footer>
-        <p>&copy; 2024 B-EATS - Comida a tu Gusto. Todos los derechos reservados.</p>
+        <p>© 2024 B-EATS - Comida a tu Gusto. Todos los derechos reservados.</p>
     </footer>
-
     <script>
         function processPayment() {
-            var form = document.getElementById('paymentForm');
+            var form = document.getElementById('paidForm');
             var loading = document.getElementById('loading');
             var message = document.getElementById('message');
-
+            
             // Muestra "Cargando..."
             loading.style.display = 'block';
             form.style.display = 'none';
-
+            
             setTimeout(function() {
                 // Oculta "Cargando..." y muestra el mensaje
                 loading.style.display = 'none';
                 message.style.display = 'block';
                 message.innerHTML = 'Gracias por su compra. Las instrucciones para seguir con su proceso se le brindarán a su correo electrónico. Gracias.';
-            }, 4000); // Retraso de 4 segundos
+                // Retraso de 4 segundos
+            }, 4000); // El tiempo debe ser en milisegundos
         }
     </script>
 </body>
