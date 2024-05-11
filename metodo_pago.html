@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método de Pago - B-EATS</title>
+    <style>
+        body {
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header, footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header a, footer a {
+            color: white;
+            text-decoration: none;
+        }
+        header a:hover, footer a:hover {
+            text-decoration: underline;
+        }
+        section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .payment-form {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .payment-form h2 {
+            color: #c80000;
+        }
+        .payment-form label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #333;
+        }
+        .payment-form input, .payment-form select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        .button {
+            background-color: #c80000;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #ff0000;
+        }
+        #loading {
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #c80000;
+        }
+        #message {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Método de Pago - B-EATS</h1>
+        <nav>
+            <a href="index.html">Volver a la Página Principal</a>
+        </nav>
+    </header>
+
+    <section>
+        <div class="payment-form">
+            <h2>Detalles de Pago</h2>
+            <form id="paymentForm">
+                <label for="cardNumber">Número de Tarjeta:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required>
+                
+                <label for="cardHolder">Nombre en la Tarjeta:</label>
+                <input type="text" id="cardHolder" name="cardHolder" required>
+
+                <label for="expiryDate">Fecha de Expiración:</label>
+                <input type="month" id="expiryDate" name="expiryDate" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+
+                <button type="button" class="button" onclick="processPayment()">Procesar Pago</button>
+            </form>
+            <div id="loading">Cargando...</div>
+            <div id="message"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 B-EATS - Comida a tu Gusto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function processPayment() {
+            var form = document.getElementById('paymentForm');
+            var loading = document.getElementById('loading');
+            var message = document.getElementById('message');
+
+            // Muestra "Cargando..."
+            loading.style.display = 'block';
+            form.style.display = 'none';
+
+            setTimeout(function() {
+                // Oculta "Cargando..." y muestra el mensaje
+                loading.style.display = 'none';
+                message.style.display = 'block';
+                message.innerHTML = 'Gracias por su compra. Las instrucciones para seguir con su proceso se le brindarán a su correo electrónico. Gracias.';
+            }, 4000); // Retraso de 4 segundos
+        }
+    </script>
+</body>
+</html>

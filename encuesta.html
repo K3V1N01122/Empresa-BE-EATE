@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta - B-EATS</title>
+    <style>
+        body {
+            background-color: #fff; /* Fondo blanco para coherencia con otras páginas */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente consistente con el sitio */
+            padding: 0;
+            margin: 0;
+            color: #333; /* Color de texto oscuro para mejor legibilidad */
+        }
+        header {
+            background-color: #000; /* Fondo negro para la cabecera */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px; /* Tamaño de fuente para etiquetas */
+        }
+        input[type="text"], select, input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"], input[type="button"] {
+            background-color: #c80000; /* Botón rojo para coherencia con el sitio */
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, input[type="button"]:hover {
+            background-color: #ff0000; /* Color rojo más brillante al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Encuesta de Somatología - B-EATS</h1>
+        <nav>
+            <a href="index.html">Volver a la Página Principal</a>
+        </nav>
+    </header>
+    <form id="surveyForm">
+        <label for="tipo_somatologia">1. ¿Qué tipo de somatología tiene?</label>
+        <select id="tipo_somatologia" name="tipo_somatologia">
+            <option value="Endomorfo">Endomorfo</option>
+            <option value="Mesomorfo">Mesomorfo</option>
+            <option value="Ectomorfo">Ectomorfo</option>
+        </select>
+
+        <label for="peso">2. ¿Cuánto pesa? (kg)</label>
+        <input type="text" id="peso" name="peso" placeholder="Ingrese su peso en kilogramos">
+
+        <label for="altura">3. ¿Cuánto mide? (cm)</label>
+        <input type="text" id="altura" name="altura" placeholder="Ingrese su altura en centímetros">
+
+        <label for="alergias">4. ¿Qué tipo de alimentos es alérgico?</label>
+        <input type="text" id="alergias" name="alergias" placeholder="Escriba sus alergias alimentarias aquí">
+
+        <input type="submit" value="Enviar Encuesta">
+    </form>
+
+    <script>
+        document.getElementById('surveyForm').onsubmit = function(event) {
+            event.preventDefault(); // Evitar enviar el formulario para demostración
+            alert('Gracias por responder nuestra encuesta. Puedes adquirir nuestra membresía para más información.');
+        };
+    </script>
+</body>
+</html>

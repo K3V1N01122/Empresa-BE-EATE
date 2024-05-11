@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-EATS - Comida a tu Gusto</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header, footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header {
+            position: relative;
+        }
+        nav .menu {
+            text-align: center;
+            padding: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto;
+            display: inline-block;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav a, footer a {
+            color: white;
+            text-decoration: none;
+        }
+        nav a:hover, footer a:hover {
+            text-decoration: underline;
+        }
+        .auth-links {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .auth-links a {
+            display: block;
+        }
+        section {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .slider {
+            width: 80%;
+            margin: auto;
+        }
+        .slider img {
+            max-width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            margin: auto;
+        }
+        .call-to-action {
+            background-color: #c80000;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .call-to-action:hover {
+            background-color: #ff0000;
+        }
+        .info-box {
+            width: 80%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            transition: box-shadow 0.3s;
+            background-color: #fff;
+        }
+        .info-box:hover {
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        }
+        .info-box header {
+            background-color: #000;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .info-box p {
+            padding: 15px;
+            text-align: left;
+            margin: 0;
+            color: #000;
+        }
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .footer-contact i {
+            margin-right: 5px;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+        h1 {
+            animation: bounce 2s infinite;
+        }
+        .team-members {
+            font-size: 16px;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>B-EATS</h1>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="membresia.html" target="_blank">Membresía</a></li>
+                    <li><a href="encuesta.html" target="_blank">Encuesta</a></li>
+                    <li><a href="mision_vision.html" target="_blank">Misión y Visión</a></li>
+                </ul>
+            </div>
+            <div class="auth-links">
+                <a href="inicio_sesion.html" target="_blank"><i class="fas fa-user"></i> Iniciar Sesión</a>
+                <a href="registro.html" target="_blank"><i class="fas fa-user-plus"></i> Registrarse</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Bienvenido a B-EATS</h2>
+        <p>Somos tu mejor opción para comida saludable y deliciosa a tu puerta.</p>
+        <div class="slider">
+            <div><img src="foto1.jpg" alt="Imagen de comida saludable 1"></div>
+            <div><img src="foto2.jpg" alt="Imagen de comida saludable 2"></div>
+            <div><img src="foto3.jpg" alt="Imagen de comida saludable 3"></div>
+        </div>
+        <a href="membresia.html" class="call-to-action">Ordena Ahora</a>
+    </section>
+
+    <section>
+        <div class="info-box">
+            <header>Membresía Personalizada</header>
+            <p>Con nuestra membresía, obtendrás acceso a un nutricionista que te diseñará una dieta personalizada según tus necesidades y objetivos.</p>
+        </div>
+        <div class="info-box">
+            <header>Entrega de Ingredientes</header>
+            <p>Si prefieres cocinar tú mismo, puedes ordenar los ingredientes frescos y de alta calidad directamente a tu casa.</p>
+        </div>
+        <div class="info-box">
+            <header>Comida Preparada</header>
+            <p>¿No tienes tiempo para cocinar? No te preocupes, también ofrecemos una amplia variedad de platos preparados listos para calentar y disfrutar.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-contact">
+            <i class="fas fa-phone"></i><span>30368005</span>
+        </div>
+        <div>
+            <a href="https://www.instagram.com/b.eatsguatemala?igsh=MXZ1ODB2eHBvNW41aw%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+        <div class="team-members">
+            Estrada Rodríguez, Juan Pablo – Encargado de envios<br>
+            Hernández Batres, Julio Sebastián – Encargado de marketing<br>
+            Palencia Aldana, Kevin Rodrigo – Gerente general y mantenimiento de la pagina<br>
+            Suruy Molina, Carlos Raúl – Encargada de servicio al cliente<br>
+            West Ortiz, Paula Nicolle – Encargada de ventas
+        </div>
+        <p>© 2024 B-EATS. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,           // Activar reproducción automática
+                autoplaySpeed: 2000       // Cambio cada 2 segundos
+            });
+        });
+    </script>
+</body>
+</html>

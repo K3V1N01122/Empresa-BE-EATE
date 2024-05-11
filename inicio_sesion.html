@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - B-EATS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-image: linear-gradient(black, white);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .login-container h2 {
+            color: #000000;
+            text-align: center;
+        }
+        .form-input {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-button {
+            background-color: #c80000;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .login-button:hover {
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form onsubmit="loginUser(event)">
+            <div class="form-input">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-input">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-button">Iniciar Sesión</button>
+        </form>
+    </div>
+    <script>
+        function loginUser(event) {
+            event.preventDefault(); // Prevent the form from submitting via the browser
+            
+            // Aquí podrías agregar tu lógica para verificar las credenciales del usuario
+            // Por ahora, solo simularé un inicio de sesión exitoso
+            
+            alert('Se inició sesión exitosamente');
+            // Simular el inicio de sesión guardando un estado en el almacenamiento local
+            localStorage.setItem('isUserLoggedIn', 'true');
+            // Redirigir al usuario al menú principal
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

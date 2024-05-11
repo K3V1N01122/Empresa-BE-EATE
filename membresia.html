@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membresía - B-EATS</title>
+    <style>
+        body {
+            background-color: #fff; /* Fondo blanco para mayor claridad y profesionalidad */
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header, footer {
+            background-color: #000; /* Fondo negro para mantener consistencia con el sitio principal */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header a, footer a {
+            color: white;
+            text-decoration: none;
+        }
+        header a:hover, footer a:hover {
+            text-decoration: underline;
+        }
+        section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .membership-info {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .membership-info h2 {
+            color: #c80000; /* Rojo para títulos, consistente con el estilo del sitio principal */
+        }
+        .membership-info p {
+            font-size: 18px;
+            color: #333; /* Color de texto oscuro para mejor legibilidad */
+            margin-bottom: 10px;
+            line-height: 1.5; /* Espaciado de línea para mejorar la legibilidad */
+        }
+        .button {
+            background-color: #c80000; /* Botón rojo para acciones */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #ff0000; /* Rojo más brillante en hover */
+        }
+        .membership-option {
+            margin: 20px;
+        }
+        label {
+            margin-right: 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Membresía - B-EATS</h1>
+        <nav>
+            <a href="index.html">Volver a la Página Principal</a>
+        </nav>
+    </header>
+
+    <section>
+        <div class="membership-info">
+            <h2>Únete a nuestra membresía</h2>
+            <p>Conviértete en miembro de B-EATS y disfruta de una alimentación saludable y conveniente.</p>
+            <p>Elige el plan que mejor se adapte a tus necesidades:</p>
+            <form action="metodo_pago.html" method="post">
+                <div class="membership-option">
+                    <input type="radio" id="monthly" name="membership" value="monthly">
+                    <label for="monthly">Membresía Mensual: Q2500 al mes</label>
+                </div>
+                <div class="membership-option">
+                    <input type="radio" id="daily" name="membership" value="daily">
+                    <label for="daily">Membresía Diaria: Q100 por día</label>
+                </div>
+                <div class="membership-option">
+                    <input type="radio" id="annual" name="membership" value="annual">
+                    <label for="annual">Membresía Anual: Q8299.99 al año</label>
+                </div>
+                <button type="submit" class="button">Inscríbete Ahora</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 B-EATS - Comida a tu Gusto. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
